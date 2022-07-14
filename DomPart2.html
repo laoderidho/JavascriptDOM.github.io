@@ -7,12 +7,41 @@
     <title>Document</title>
 </head>
 <body>
-    <h1></h1>
-    <p></p>
-    <h2 ></h2>
+    <button onclick="aku()">Tekan warna</button>
+    <button onclick="aku1()">Tekan warna</button>
+    <h1>Aku H1</h1>
+    <h1>Aku H1</h1>
+    <h1>Aku H1</h1>
+    <h1>Aku H1</h1>
+    <h1>Aku H1</h1>
+    
+        <p>aku p</p>
+        <p>aku p</p>
+        <p>aku p</p>
+        <p>aku p</p>
+        <p>aku p</p>
+        <p>aku p</p>
+
+    <h2>aku h2</h2>
 
     <script>
-        
+      
+      const aku = ()=>{
+        const h1 = document.querySelectorAll('h1') //pemanggilan dan penangkapannya hampir sama dengan html;
+        for (let i=0; i<=h1.length; i++){
+            h1[i].style.color='red';
+        }
+      }
+      const aku1 = ()=>{
+        const p = document.querySelectorAll('p');
+        for (let i=0; i<=p.length; i++){
+            p[i].style.color='red';
+        }
+      }
+
+      const aku2 = document.querySelector('h2').innerHTML="Saya h2"; //pemanggilan hanya bisa 1 saja hampir sama dengan id
     </script>
 </body>
 </html>
+
+<!-- tag section di gunakan untuk mengelompokkan suatu dalam html -->

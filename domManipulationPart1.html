@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div id="aku">
+    <h1>aku1</h1>
+    <h2>aku2</h2>
+    <h3>aku3</h3>
+    <p>aku4</p>
+  </div>
+  <div id="saya">
+    <h1>I am </h1>
+    <h2>You are</h2>
+  </div>
+  <div>
+    <h1>You are</h1>
+    <h2>My name Ridho</h2>
+  </div>
+
+    <script>
+        const aku = document.querySelector("#aku").style.color='red'; //.style khusus untuk memberi style pada html dan hanya bisa 1 style saja
+        const saya = document.getElementById("saya");
+        saya.style.color='lightblue';
+        saya.style.backgroundColor='red'; //jika style lebih dari satu maka harus di buat seperti ini
+
+        /* .classList.add() untuk menambahkan class
+           .classList.remove() untuk menghilangkan class yang ada
+           .classList.toggle() untuk menambahkan class jika ada class yang kosong jika tidak dia akan menghilangkan
+           .classList.item() mengetahui class dalam elemen
+           .classList.contains() untuk mengetahui ada class tertentu
+           .classList.replace() untuk mengganti class yang ada*/
+
+    </script>
+</body>
+</html>
