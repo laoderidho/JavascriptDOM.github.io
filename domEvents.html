@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1 id="saya" onclick="ubahwarna()" >Ketik Ini</h1>
+        <h2 id="saya2">Klik saya</h2>
+        <h3 id="saya3">Klik Untuk Mewarnai</h3>
+        <h4></h4>
+    </div>
+    <div>
+        <h2></h2>
+        <h2></h2>
+    </div>
+    <div id="saya">
+        <h2>Ini saya</h2>
+        <p>Ini paragraf Lama</p>
+
+    </div>
+
+    <script>
+        const h1 = document.getElementById('saya');
+        //event handleer
+        const ubahwarna =()=>{ h1.style.color='red'; }//inline HTML atribute `Tidak di sarankan`
+        const p2 = document.getElementById('saya2');
+        p2.onclick=ubahwarna1;
+
+        function ubahwarna1() {p2.style.color='blue'; }//tidak bisa pakai arrow function lebih di sarankan
+        //event listener
+        const saya = document.querySelector('div#saya');
+        saya.addEventListener('click', ()=>{
+            const p = document.querySelector('div#saya p');
+            const pbaru = document.createElement('p');
+            const pbaru1 = document.createTextNode('ini adalah paragraf baru');
+            
+            pbaru.appendChild(pbaru1);
+            p.appendChild(pbaru);
+        })
+
+        const saya1 = document.getElementById('saya3');
+
+        saya1.addEventListener('click', ()=>{
+           saya1.style.backgroundColor='black';
+        });
+        saya1.addEventListener('click', ()=>{
+           saya1.style.color='white';
+        })
+        /*Event handler dan event listener mempunyai perbedaan yaitu event handler hanya punya 
+        onclick dan event listener punya click yang artinya onclick hanya bisa 1 perintah saja dan
+        jika ada perintah lain dia akan menjalankan perintah terakhir sementara click bisa menjalankan banyak perintah sesuai apa yang kita ingin buat*/
+
+        
+    </script>
+</body>
+</html>

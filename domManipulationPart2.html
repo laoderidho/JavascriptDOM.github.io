@@ -7,12 +7,52 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
+    <section id="ini1">
         <h1>I am A programmer study</h1>
+    </section>
+    <div id="ini2">
+        <ul>
+            <li>Ini1</li>
+            <li>ini3</li>
+            <li>ini4</li>
+            <li>ini5</li>
+        </ul>
+    </div>
+    <div id="ini3">
+        <h2>Hello word</h2>
     </div>
 
     <script>
+        const pbaru = document.createElement('p'); //ini untuk membuat elemen baru tag p di html
+        const pbaru1=document.createTextNode('paragraf baru'); // ini adalah isi dalam tag baru
+
+        pbaru.appendChild(pbaru1); //ini untuk menggabungkan 2 elemen di atas 
+        const ini = document.getElementById('ini1');
+        ini.appendChild(pbaru); //ini untuk menaruh gabungan teks dan elemen di bagian id dan div class ini1
+
+        const liBaru = document.createElement('li');
+        const liBaru1 = document.createTextNode('Ini adalah li baru');
+
+        liBaru.appendChild(liBaru1);
+        const ul = document.querySelector('div#ini2 ul'); //carilah div ber id ini2
+        const li2 = ul.querySelector('li:nth-child(2)'); //untuk mempersingkat kode maka deklarasikan const ul di atas di bagian const li2 agar tidak ribet, li:nth-child(2) adalah tempat dalam ul dan li yang ber indeks ke 2
+
+        ul.insertBefore(liBaru,li2);  //ini menggabungkan bagian const ul dan constli2
+
+        const h11 = document.getElementsByTagName('h1')[0];
         
+        ini.removeChild(h11); //untuk menghapus elemen di dalam div ber id ="ini1"
+
+        const ini3 = document.getElementById('ini3');
+        const ini31 = ini3.querySelector('h2');
+
+        const h2baru = document.createElement('h2');
+        const ini3Baru=document.createTextNode('paragraf baru');
+
+        h2baru.appendChild(ini3Baru);
+
+        ini3.replaceChild(h2baru, ini31); //ini untuk mengganti elemen baru di html
+
     </script>
 </body>
 </html>
