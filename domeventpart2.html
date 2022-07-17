@@ -7,6 +7,78 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <button id="saya" >Klik saya</button>
+    <button id="saya1">Klik saya1</button>
+    <div class="satu">
+        <h1>ini satu</h1>
+    </div>
+    <div class="dua">
+        <h2></h2>
+        <h2></h2>
+        <h2></h2>
+        <h2></h2>
+        <h2></h2>
+        <h2></h2>
+    </div>
+    <div class="tiga">
+        <h3></h3>
+        <h3></h3>
+        <h3></h3>
+        <h3></h3>
+        <h3></h3>
+        <h3></h3>
+    </div>
+    <div class="empat">
+        <h4></h4>
+        <h4></h4>
+        <h4></h4>
+        <h4></h4>
+        <h4></h4>
+
+        <h4></h4>
+    </div>
+
+    <script>
+      
+        /* button bisa di deklarasi tanpa getelemen jika ada addEeventListener*/
+        saya.addEventListener('click', ()=>{
+            const satu = document.querySelector('div.satu h1');
+
+            const satu1 = document.createElement('h1'); 
+            satu1.textContent="ini saya"; //konsep sama tapi lebih mudah
+            satu.appendChild(satu1);
+        })
+
+       
+        // saya1.addEventListener('mouseup', ()=>{ //mouseup terjadi jika kita klik mouse di awal
+        //     const satu = document.querySelector('div.dua h2');
+        //     const satu1 = document.createElement('h1');
+        //     satu1.textContent="ini saya"; //terjadi jika kita selesai menahan klick mouse
+        //     satu.appendChild(satu1);
+        // })
+
+        // saya1.addEventListener('mouseenter', ()=>{ 
+        //     const satu = document.querySelector('div.dua h2');
+        //     const satu1 = document.createElement('h1'); //fungsi sama seperti hover bedanya ini menjalankan perintah
+        //     satu1.textContent="ini saya"; 
+        //     satu.appendChild(satu1);
+        // })
+        // saya1.addEventListener('mouseleave', ()=>{ 
+        //     const satu = document.querySelector('div.dua h2'); //ini berjalan setelah kita meninggalkan mouse
+        //     const satu1 = document.createElement('h1');
+        //     satu1.textContent="ini saya"; 
+        //     satu.appendChild(satu1);
+        // })
+        // saya1.addEventListener('mousemove', ()=>{ 
+        //     const satu = document.querySelector('div.dua h2'); //sama seperti hover 
+        //     const satu1 = document.createElement('h1');
+        //     satu1.textContent="ini saya"; 
+        //     satu.appendChild(satu1);
+        // })
+        
+
+
+
+    </script>
 </body>
 </html>
