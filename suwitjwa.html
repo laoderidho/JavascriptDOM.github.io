@@ -161,6 +161,9 @@ img {
 
 
     <div class="container">
+        <p>Hasil</p>
+        <p>Komputer: <p class="bot"></p> </p>
+        <p>Player : <p class="play"></p> </p>
         <div class="area-komputer">
             <img src="img/gajah.png" class="img-komputer">
         </div>
@@ -251,7 +254,9 @@ img {
 
     const pilihan = document.querySelectorAll('li img');
     pilihan.forEach(function(i){
-       
+
+            let bot = document.querySelector('.bot')
+            let play = document.querySelector('.play')
             i.addEventListener('click', function(){
             const komputer = getkomputer(); //function tidak bleh sama dengan nama variabel 
             const player = i.className;  //untuk mengambil nama class dan mem print string className
@@ -264,9 +269,22 @@ img {
 
                 const info = document.querySelector('.info');
                 info.innerHTML = hasil;
+
+                if(hasil === 'menang'){
+                    let play1 = 0;
+                    play1++;
+                    play.innerHTML = play1;
+                }
+                if(hasil === 'kalah'){
+                   let bot1 = 0;
+                   bot1++;
+                   bot.innerHTML = bot1;
+                }
             }, 1000)
         })
         })
+
+        
     </script>
 </body>
 </html>
