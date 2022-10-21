@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .putih{
+            background-color: black;
+            color: rgb(243, 234, 234);
+        }
+        .kotak{
+            width: 25px;
+            height: 25px;
+            margin: 10px auto;
+        }
+        .merah{
+            text-align: center;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bermain dengan warna</h1>
+    <button type="button" id="ubahWarna">Ubah Warna</button>
+    <br><br>
+
+
+
+    <script>
+
+       const ubah = document.getElementById('ubahWarna');
+    
+
+        ubah.addEventListener('click', ()=>{
+            // document.body.setAttribute('class', 'putih'); 
+            /*Document.body tidak di deklarasikan karena body hanya 1 saja dan tidak bisa di tambahkan
+            sementara setAtribute adalah pemanggilan class css oleh javascript*/
+            document.body.classList.toggle('putih'); //ini menjalankan jika sesuatu di click maka dia akan menjalankan css dan jika di klik sekali lagi maka dia akan hilang
+        })
+
+        const acakWarna = document.createElement('button');
+
+        acakWarna.textContent = 'acak Warna';
+
+        acakWarna.setAttribute('type', 'button');  //untuk menambahkan type di dalam button dan atribute nya 
+
+        ubah.after(acakWarna);
+
+        acakWarna.addEventListener('click', ()=>{
+            const r = Math.round(Math.random()*255 + 1);
+           const g = Math.round(Math.random()*255 + 1);
+           const b = Math.round(Math.random()*255 + 1);
+            
+           document.body.style.backgroundColor ='rgb('+ r +','+ g +','+b +')';
+
+           //bagian const di atxas adalah pembuatan random atau acak
+        })
+        
+
+    </script>
+</body>
+</html>
